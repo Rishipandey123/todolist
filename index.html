@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    
+    <style>
+body{
+    /* background-color: skyblue; */
+    margin: 100px;
+    text-align: center;
+    background-color: #cccccc;
+}
+
+.input{
+ width: 10px;
+ 
+
+}
+.btn{
+  background-color: brown;
+}
+
+
+    </style>
+</head>
+
+<body>
+<div class = "container">
+    <h1>Todolist</h1>
+    <input type = "text" placeholder="details" id="addlist">
+    <button id = "button" class="btn">+</button>
+
+    
+<div class="to-do" id="todocontainer">
+
+
+
+
+</div>
+</body>
+
+<script>
+
+let addbutton = document.getElementById("button");
+let addlistinput = document.getElementById("addlist");
+let todocontainer = document.getElementById("todocontainer");
+addbutton.addEventListener("click", function(){
+
+var paragraph = document.createElement("p");
+paragraph.innerText = addlist.value
+todocontainer.appendChild(paragraph);
+addlist.value = " ";
+// paragraph.addEventListener("click", function(){
+//     paragraph.style.textDecoration = "line-through"
+// })
+
+
+
+
+paragraph.addEventListener("dblclick", function(){
+    todocontainer.removeChild(paragraph);
+})
+
+})
+
+
+</script>
+</html>
